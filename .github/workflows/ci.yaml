@@ -70,17 +70,18 @@ jobs:
         continue-on-error: true
         run: composer install --no-progress --prefer-dist --optimize-autoloader
 
-      - name: Generate Applications Key
-        run: php artisan key:generate
-
-      - name: Clear Config
-        run: php artisan config:clear
-
       - name: Run Migration
         run: php artisan migrate -v
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
+
+
+      - name: Generate Applications Key
+        run: php artisan key:generate
+
+      - name: Clear Config
+        run: php artisan config:clear
 
       - name: Run NPM Install
         run: npm i
