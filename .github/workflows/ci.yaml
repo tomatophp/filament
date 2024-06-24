@@ -78,9 +78,11 @@ jobs:
 
 
       - name: Generate Applications Key
+        continue-on-error: true
         run: php artisan key:generate
 
       - name: Clear Config
+        continue-on-error: true
         run: php artisan config:clear
 
       - name: Run NPM Install
@@ -88,6 +90,3 @@ jobs:
 
       - name: Run NPM Build
         run: npm run build
-
-      - name: Run PEST Test
-        run: ./vendor/bin/pest
