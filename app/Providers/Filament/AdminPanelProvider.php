@@ -90,6 +90,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugin(\TomatoPHP\FilamentSettingsHub\FilamentSettingsHubPlugin::make())
             ->plugin(\TomatoPHP\FilamentBrowser\FilamentBrowserPlugin::make())
             ->plugin(\TomatoPHP\FilamentArtisan\FilamentArtisanPlugin::make())
+            ->plugin(\TomatoPHP\FilamentPlugins\FilamentPluginsPlugin::make())
             ->plugin(\TomatoPHP\FilamentTypes\FilamentTypesPlugin::make())
             ->plugin(
                 \TomatoPHP\FilamentCms\FilamentCMSPlugin::make()
