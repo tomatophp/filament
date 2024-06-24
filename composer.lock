@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "007254fe5ed9a54a08ae52f7ca481503",
+    "content-hash": "f08455b1930d08d27555e4d159478ee5",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -14575,75 +14575,6 @@
                 }
             ],
             "time": "2024-05-15T11:42:35+00:00"
-        },
-        {
-            "name": "tomatophp/filament-plugins",
-            "version": "v1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tomatophp/filament-plugins.git",
-                "reference": "e99537d820b5f436faf4954b07766e893654f537"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/filament-plugins/zipball/e99537d820b5f436faf4954b07766e893654f537",
-                "reference": "e99537d820b5f436faf4954b07766e893654f537",
-                "shasum": ""
-            },
-            "require": {
-                "calebporzio/sushi": "*",
-                "filament/filament": "^3.0.0",
-                "filament/notifications": "^3.0.0",
-                "nwidart/laravel-modules": "^11.0",
-                "php": "^8.1|^8.2",
-                "tomatophp/console-helpers": "^1.1",
-                "tomatophp/filament-icons": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "TomatoPHP\\FilamentPlugins\\FilamentPluginsServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TomatoPHP\\FilamentPlugins\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fady Mondy",
-                    "email": "info@3x1.io"
-                }
-            ],
-            "description": "Manage your modules as a plugin system with plugin generator",
-            "keywords": [
-                "filament",
-                "generator",
-                "hmvc",
-                "laravel",
-                "modules",
-                "php",
-                "plugins",
-                "template"
-            ],
-            "support": {
-                "issues": "https://github.com/tomatophp/filament-plugins/issues",
-                "source": "https://github.com/tomatophp/filament-plugins/tree/v1.0.11"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/3x1io",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-06-22T13:44:11+00:00"
         },
         {
             "name": "tomatophp/filament-settings-hub",
