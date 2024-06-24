@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2d68023c047280a65c6988929c40008",
+    "content-hash": "007254fe5ed9a54a08ae52f7ca481503",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -13776,16 +13776,16 @@
         },
         {
             "name": "tomatophp/filament-alerts",
-            "version": "v1.0.3",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/filament-alerts.git",
-                "reference": "f0a3d77524c9cb3f1bbe1920ccfeec77e8ec502a"
+                "reference": "e25873c2674f8d584453f269078b69bd7d6dcc73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/filament-alerts/zipball/f0a3d77524c9cb3f1bbe1920ccfeec77e8ec502a",
-                "reference": "f0a3d77524c9cb3f1bbe1920ccfeec77e8ec502a",
+                "url": "https://api.github.com/repos/tomatophp/filament-alerts/zipball/e25873c2674f8d584453f269078b69bd7d6dcc73",
+                "reference": "e25873c2674f8d584453f269078b69bd7d6dcc73",
                 "shasum": ""
             },
             "require": {
@@ -13797,7 +13797,6 @@
                 "php": "^8.1|^8.2",
                 "tomatophp/console-helpers": "^1.1",
                 "tomatophp/discord-notifications": "^1.0",
-                "tomatophp/fcm-notifications": "^1.0",
                 "tomatophp/filament-icons": "^1.0",
                 "tomatophp/filament-settings-hub": "^1.0",
                 "tomatophp/messagebird-notifications": "^1.0",
@@ -13826,18 +13825,24 @@
                     "email": "info@3x1.io"
                 }
             ],
-            "description": "Send notification to users using notification templates and multi notification channels",
+            "description": "Send notification to users using notification templates and multi notification channels, it's support Filament Native Notification Service with macro, and a full integration to FCM service worker notifications",
             "keywords": [
+                "FCM",
                 "alets",
+                "database",
+                "discord",
+                "email",
                 "filament",
                 "laravel",
                 "notifications",
                 "php",
+                "reverb",
+                "slack",
                 "tall stack"
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/filament-alerts/issues",
-                "source": "https://github.com/tomatophp/filament-alerts/tree/v1.0.3"
+                "source": "https://github.com/tomatophp/filament-alerts/tree/v2.0.2"
             },
             "funding": [
                 {
@@ -13845,7 +13850,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-09T15:33:25+00:00"
+            "time": "2024-06-24T13:53:07+00:00"
         },
         {
             "name": "tomatophp/filament-api",

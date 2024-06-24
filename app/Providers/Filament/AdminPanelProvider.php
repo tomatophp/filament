@@ -100,11 +100,7 @@ class AdminPanelProvider extends PanelProvider
                     ->usePageBuilder()
             )
             ->plugin(\TomatoPHP\FilamentWallet\FilamentWalletPlugin::make()->useAccounts())
-            ->plugin(
-                \TomatoPHP\FilamentAlerts\FilamentAlertsPlugin::make()
-                    ->useSettingsHub()
-                    ->useFCM()
-            )
+            ->plugin(\TomatoPHP\FilamentAlerts\FilamentAlertsPlugin::make()->useSettingsHub()->useFCM())
             ->plugin(\TomatoPHP\FilamentLocations\FilamentLocationsPlugin::make())
             ->plugin(
                 \TomatoPHP\FilamentAccounts\FilamentAccountsPlugin::make()

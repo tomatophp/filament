@@ -36,7 +36,7 @@
         "openai-php/laravel": "^0.10.1",
         "stechstudio/filament-impersonate": "^3.8",
         "tomatophp/filament-accounts": "^2.0",
-        "tomatophp/filament-alerts": "^1.0",
+        "tomatophp/filament-alerts": "^2.0",
         "tomatophp/filament-api": "^1.0",
         "tomatophp/filament-artisan": "^1.0",
         "tomatophp/filament-browser": "^1.0",
