@@ -13854,16 +13854,16 @@
         },
         {
             "name": "tomatophp/filament-api",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomatophp/filament-api.git",
-                "reference": "42470fb7463bb2a180910d2662c1f3ecc3ec11f0"
+                "reference": "f39af4c4f97528e9d728d9e44f9d8a8f6f109120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/filament-api/zipball/42470fb7463bb2a180910d2662c1f3ecc3ec11f0",
-                "reference": "42470fb7463bb2a180910d2662c1f3ecc3ec11f0",
+                "url": "https://api.github.com/repos/tomatophp/filament-api/zipball/f39af4c4f97528e9d728d9e44f9d8a8f6f109120",
+                "reference": "f39af4c4f97528e9d728d9e44f9d8a8f6f109120",
                 "shasum": ""
             },
             "require": {
@@ -13908,7 +13908,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tomatophp/filament-api/issues",
-                "source": "https://github.com/tomatophp/filament-api/tree/v1.0.0"
+                "source": "https://github.com/tomatophp/filament-api/tree/v1.0.1"
             },
             "funding": [
                 {
@@ -13916,7 +13916,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-19T16:53:02+00:00"
+            "time": "2024-06-24T14:30:55+00:00"
         },
         {
             "name": "tomatophp/filament-artisan",
