@@ -36,20 +36,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
        URL::forceScheme('https');
-
-        FilamentAsset::register([
-            Js::make('echo', Vite::asset('resources/js/app.js'))->module(),
-        ]);
-
-        FilamentCMS::authors()->register([
-            CmsAuthor::make('users')->model(User::class),
-            CmsAuthor::make('accounts')->model(Account::class),
-        ]);
-
-        FilamentCMS::types()->register([
-            CmsType::make('building')
-                ->icon('heroicon-o-home')
-                ->color('danger')
-        ]);
     }
 }
