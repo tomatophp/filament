@@ -27,6 +27,11 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use ProtoneMedia\Splade\Http\SpladeMiddleware;
 use TomatoPHP\FilamentApi\FilamentAPIPlugin;
+use TomatoPHP\FilamentEcommerce\Filament\Widgets\OrderPaymentMethodChart;
+use TomatoPHP\FilamentEcommerce\Filament\Widgets\OrderSourceChart;
+use TomatoPHP\FilamentEcommerce\Filament\Widgets\OrdersStateWidget;
+use TomatoPHP\FilamentEcommerce\Filament\Widgets\OrderStateChart;
+use TomatoPHP\FilamentEcommerce\FilamentEcommercePlugin;
 use TomatoPHP\FilamentMediaManager\FilamentMediaManagerPlugin;
 use TomatoPHP\FilamentMenus\Services\FilamentMenuLoader;
 use TomatoPHP\FilamentTranslations\FilamentTranslationsSwitcherPlugin;
@@ -63,7 +68,7 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                Widgets\FilamentInfoWidget::class
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -83,6 +88,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugin(\TomatoPHP\FilamentUsers\FilamentUsersPlugin::make())
             ->plugin(\TomatoPHP\FilamentTranslations\FilamentTranslationsPlugin::make()
                 ->allowGPTScan()
+                ->allowGoogleTranslateScan()
                 ->allowClearTranslations()
                 ->allowCreate())
             ->plugin(FilamentTranslationsSwitcherPlugin::make())
@@ -114,7 +120,6 @@ class AdminPanelProvider extends PanelProvider
                     ->useLoginBy()
                     ->useAvatar()
                     ->useTypes()
-                    ->useTeams()
                     ->useLocations()
                     ->useNotifications()
                     ->useImpersonate()
@@ -123,7 +128,8 @@ class AdminPanelProvider extends PanelProvider
             )
             ->plugin(\BezhanSalleh\FilamentShield\FilamentShieldPlugin::make())
             ->plugin(FilamentAPIPlugin::make())
-            ->plugin(FilamentMediaManagerPlugin::make())
+            ->plugin(FilamentMediaManagerPlugin::make()->allowSubFolders())
+            ->plugin(FilamentEcommercePlugin::make()->useWidgets())
             ->plugin(\TomatoPHP\FilamentFcm\FilamentFcmPlugin::make());
     }
 }

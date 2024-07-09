@@ -4,11 +4,6 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 
 export default defineConfig({
-    resolve: {
-        alias: {
-            "@mingle": path.resolve(__dirname, "/vendor/ijpatricio/mingle/resources/js"),
-        },
-    },
     plugins: [
         vue({
             template: {
@@ -22,7 +17,6 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/Browser.js'
             ],
             refresh: true,
         })

@@ -8,7 +8,7 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
         './vendor/filament/**/**/*.blade.php',
-        './vendor/tomatophp/filament-cms/resources/views/**/*.blade.php',
+        './vendor/tomatophp/**/resources/views/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
     ],

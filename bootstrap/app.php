@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
     })
     ->withExceptions(function (Exceptions $exceptions) {
+        \TomatoPHP\FilamentDiscord\Helpers\DiscordErrorReporter::make($exceptions);
         $exceptions->renderable(function (\Illuminate\Foundation\Exceptions\Handler $e) {
             return \ProtoneMedia\Splade\SpladeCore::exceptionHandler($e);
         });

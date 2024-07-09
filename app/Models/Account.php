@@ -2,33 +2,21 @@
 
 namespace App\Models;
 
-use Bavix\Wallet\Interfaces\Wallet;
-use Bavix\Wallet\Traits\HasWallet;
-use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasAvatar;
-use Filament\Models\Contracts\HasDefaultTenant;
-use Filament\Models\Contracts\HasTenants;
-use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Collection;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use TomatoPHP\FilamentAccounts\Models\AccountRequest;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use TomatoPHP\FilamentAccounts\Traits\InteractsWithTenant;
-use TomatoPHP\FilamentAlerts\Traits\InteractsWithNotifications;
-use TomatoPHP\FilamentCms\Traits\HasPosts;
 use TomatoPHP\FilamentLocations\Models\Location;
+use TomatoPHP\FilamentTwilio\Traits\InteractsWithTwilioWhatsapp;
 
 /**
  * @property integer $id
@@ -54,14 +42,12 @@ use TomatoPHP\FilamentLocations\Models\Location;
  * @property Model meta($key, $value)
  * @property Location[] $locations
  */
-class Account extends Authenticatable implements HasMedia, HasTenants, FilamentUser
+class Account extends Authenticatable implements HasMedia, HasAvatar
 {
     use InteractsWithMedia;
     use HasApiTokens, HasFactory, Notifiable;
     use SoftDeletes;
-    use InteractsWithTenant;
-    use InteractsWithNotifications;
-    use HasPosts;
+    use InteractsWithTwilioWhatsapp;
 
     /**
      * @var array
@@ -119,7 +105,7 @@ class Account extends Authenticatable implements HasMedia, HasTenants, FilamentU
      */
     public function getFilamentAvatarUrl(): ?string
     {
-        return $this->getFirstMediaUrl('avatar')?? null;
+        return  $this->getFirstMediaUrl('avatar')?? null;
     }
 
     /**
@@ -137,6 +123,7 @@ class Account extends Authenticatable implements HasMedia, HasTenants, FilamentU
     {
         return $this->meta('gender') ?: null;
     }
+
 
     /**
      * @return HasMany
@@ -172,6 +159,8 @@ class Account extends Authenticatable implements HasMedia, HasTenants, FilamentU
             }
         }
     }
+
+
 
     /**
      * @return MorphMany

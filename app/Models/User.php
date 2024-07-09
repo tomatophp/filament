@@ -26,8 +26,8 @@ class User extends Authenticatable
     use HasRoles;
     use HasProfilePhoto;
     use InteractsWithNotifications;
-    use InteractsWithFCM;
     use HasPosts;
+    use InteractsWithFCM;
 
     public function teams(): BelongsToMany
     {

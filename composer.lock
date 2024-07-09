@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "007254fe5ed9a54a08ae52f7ca481503",
+    "content-hash": "47ef2eed3143d7418390afd6d29d9be5",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2680,6 +2680,80 @@
                 "source": "https://github.com/firebase/php-jwt/tree/v6.10.1"
             },
             "time": "2024-05-18T18:05:11+00:00"
+        },
+        {
+            "name": "flowframe/laravel-trend",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Flowframe/laravel-trend.git",
+                "reference": "bae1232325a59a7c9e99a372c80afab82309503b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Flowframe/laravel-trend/zipball/bae1232325a59a7c9e99a372c80afab82309503b",
+                "reference": "bae1232325a59a7c9e99a372c80afab82309503b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.37|^9|^10.0|^11.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.4.3"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^5.3|^6.1|^8.0",
+                "orchestra/testbench": "^6.15|^7.0|^8.0|^9.0",
+                "pestphp/pest": "^1.18|^2.34",
+                "pestphp/pest-plugin-laravel": "^1.1|^2.3",
+                "spatie/laravel-ray": "^1.23",
+                "vimeo/psalm": "^4.8|^5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Flowframe\\Trend\\TrendServiceProvider"
+                    ],
+                    "aliases": {
+                        "Trend": "Flowframe\\Trend\\TrendFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Flowframe\\Trend\\": "src",
+                    "Flowframe\\Trend\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Klopstra",
+                    "email": "lars@flowframe.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily generate model trends",
+            "homepage": "https://github.com/flowframe/laravel-trend",
+            "keywords": [
+                "Flowframe",
+                "laravel",
+                "laravel-trend"
+            ],
+            "support": {
+                "issues": "https://github.com/Flowframe/laravel-trend/issues",
+                "source": "https://github.com/Flowframe/laravel-trend/tree/v0.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/larsklopstra",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-14T13:45:40+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -6190,6 +6264,80 @@
             "time": "2024-03-31T07:05:07+00:00"
         },
         {
+            "name": "milon/barcode",
+            "version": "v11.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/milon/barcode.git",
+                "reference": "1f4031adb52146bb7fbe88ef42214011376f9cbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/milon/barcode/zipball/1f4031adb52146bb7fbe88ef42214011376f9cbe",
+                "reference": "1f4031adb52146bb7fbe88ef42214011376f9cbe",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.0|^8.0|^9.0|^10.0 | ^11.0",
+                "php": "^7.3 | ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Milon\\Barcode\\BarcodeServiceProvider"
+                    ],
+                    "aliases": {
+                        "DNS1D": "Milon\\Barcode\\Facades\\DNS1DFacade",
+                        "DNS2D": "Milon\\Barcode\\Facades\\DNS2DFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Milon\\Barcode": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nuruzzaman Milon",
+                    "email": "contact@milon.im"
+                }
+            ],
+            "description": "Barcode generator like Qr Code, PDF417, C39, C39+, C39E, C39E+, C93, S25, S25+, I25, I25+, C128, C128A, C128B, C128C, 2-Digits UPC-Based Extention, 5-Digits UPC-Based Extention, EAN 8, EAN 13, UPC-A, UPC-E, MSI (Variation of Plessey code)",
+            "keywords": [
+                "CODABAR",
+                "CODE 128",
+                "CODE 39",
+                "barcode",
+                "datamatrix",
+                "ean",
+                "laravel",
+                "pdf417",
+                "qr code",
+                "qrcode"
+            ],
+            "support": {
+                "issues": "https://github.com/milon/barcode/issues",
+                "source": "https://github.com/milon/barcode/tree/v11.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/nuruzzamanmilon",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/milon",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-02-28T18:14:32+00:00"
+        },
+        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "4.8.06",
             "source": {
@@ -7962,85 +8110,6 @@
                 "source": "https://github.com/antonioribeiro/google2fa/tree/v8.0.1"
             },
             "time": "2022-06-13T21:57:56+00:00"
-        },
-        {
-            "name": "protonemedia/laravel-splade",
-            "version": "1.4.19",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/protonemedia/laravel-splade.git",
-                "reference": "18d5c2475f8842825d0d543e92ba0d00beddc85e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/protonemedia/laravel-splade/zipball/18d5c2475f8842825d0d543e92ba0d00beddc85e",
-                "reference": "18d5c2475f8842825d0d543e92ba0d00beddc85e",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^10.48.2|^11.0.1",
-                "php": "^8.2|^8.3"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^7.10|^8.1",
-                "nunomaduro/larastan": "^2.0.1",
-                "orchestra/testbench": "^8.0|^9.0",
-                "phpunit/phpunit": "^10.4"
-            },
-            "suggest": {
-                "kirschbaum-development/eloquent-power-joins": "Required to enable support sorting by (nested) relationships in Splade Tables (^3.0)",
-                "maatwebsite/excel": "Required to enable support exports in Splade Tables (^3.1)",
-                "spatie/fractalistic": "Required to enable support for Fractal transformers (^2.9)"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "ProtoneMedia\\Splade\\ServiceProvider"
-                    ],
-                    "aliases": {
-                        "Animation": "ProtoneMedia\\Splade\\Facades\\Animation",
-                        "SEO": "ProtoneMedia\\Splade\\Facades\\SEO",
-                        "Splade": "ProtoneMedia\\Splade\\Facades\\Splade",
-                        "Toast": "ProtoneMedia\\Splade\\Facades\\Toast"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ProtoneMedia\\Splade\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pascal Baljet",
-                    "email": "pascal@protone.media",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Laravel Splade: the magic of Inertia.js with the simplicity of Blade.",
-            "homepage": "https://github.com/protonemedia/laravel-splade",
-            "keywords": [
-                "laravel",
-                "laravel-splade",
-                "protonemedia"
-            ],
-            "support": {
-                "issues": "https://github.com/protonemedia/laravel-splade/issues",
-                "source": "https://github.com/protonemedia/laravel-splade/tree/1.4.19"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/pascalbaljet",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-03-20T14:18:47+00:00"
         },
         {
             "name": "psr/cache",
@@ -10742,6 +10811,86 @@
                 "source": "https://github.com/stechstudio/filament-impersonate/tree/3.9"
             },
             "time": "2024-06-05T15:07:37+00:00"
+        },
+        {
+            "name": "stichoza/google-translate-php",
+            "version": "v5.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stichoza/google-translate-php.git",
+                "reference": "3e4dbbf8829e45ba15f263f6e18dd79e1c6fa7a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/3e4dbbf8829e45ba15f263f6e18dd79e1c6fa7a3",
+                "reference": "3e4dbbf8829e45ba15f263f6e18dd79e1c6fa7a3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stichoza\\GoogleTranslate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levan Velijanashvili",
+                    "email": "me@stichoza.com"
+                }
+            ],
+            "description": "Free Google Translate API PHP Package",
+            "homepage": "https://github.com/Stichoza/google-translate-php",
+            "keywords": [
+                "google",
+                "php",
+                "translate",
+                "translating",
+                "translator"
+            ],
+            "support": {
+                "issues": "https://github.com/Stichoza/google-translate-php/issues",
+                "source": "https://github.com/Stichoza/google-translate-php/tree/v5.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://btc.com/bc1qc25j4x7yahghm8nnn6lypnw59nptylsw32nkfl",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/stichoza",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://ko-fi.com/stichoza",
+                    "type": "ko_fi"
+                },
+                {
+                    "url": "https://liberapay.com/stichoza",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://opencollective.com/stichoza",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/stichoza",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2024-06-27T15:03:27+00:00"
         },
         {
             "name": "symfony/cache",
@@ -14183,6 +14332,138 @@
             "time": "2024-05-30T15:30:37+00:00"
         },
         {
+            "name": "tomatophp/filament-discord",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomatophp/filament-discord.git",
+                "reference": "5e292b91171dd57c1cee7376b68f5b7634c581bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomatophp/filament-discord/zipball/5e292b91171dd57c1cee7376b68f5b7634c581bd",
+                "reference": "5e292b91171dd57c1cee7376b68f5b7634c581bd",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0.0",
+                "filament/notifications": "^3.0.0",
+                "php": "^8.1|^8.2",
+                "tomatophp/console-helpers": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TomatoPHP\\FilamentDiscord\\FilamentDiscordServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TomatoPHP\\FilamentDiscord\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fady Mondy",
+                    "email": "info@3x1.io"
+                }
+            ],
+            "description": "Send Notification to discord channel Webhook using native FilamentPHP Notification Facade class",
+            "keywords": [
+                "discord",
+                "filament-plugin",
+                "filamentphp",
+                "laravel",
+                "notificaiton",
+                "notification-driver",
+                "php",
+                "tomatophp"
+            ],
+            "support": {
+                "issues": "https://github.com/tomatophp/filament-discord/issues",
+                "source": "https://github.com/tomatophp/filament-discord/tree/v0.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/3x1io",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-07-09T13:45:55+00:00"
+        },
+        {
+            "name": "tomatophp/filament-ecommerce",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomatophp/filament-ecommerce.git",
+                "reference": "2fc97007f549d13ba42be19def3fab2a01c406e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomatophp/filament-ecommerce/zipball/2fc97007f549d13ba42be19def3fab2a01c406e8",
+                "reference": "2fc97007f549d13ba42be19def3fab2a01c406e8",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0.0",
+                "php": "^8.1|^8.2",
+                "tomatophp/console-helpers": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TomatoPHP\\FilamentEcommerce\\FilamentEcommerceServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TomatoPHP\\FilamentEcommerce\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fady Mondy",
+                    "email": "info@3x1.io"
+                }
+            ],
+            "description": "Build your own ecommerce store with Filament & Splade",
+            "keywords": [
+                "cart",
+                "ecommerce",
+                "filament",
+                "laravel",
+                "orders",
+                "php",
+                "prdoucts",
+                "splade",
+                "tomatophp"
+            ],
+            "support": {
+                "issues": "https://github.com/tomatophp/filament-ecommerce/issues",
+                "source": "https://github.com/tomatophp/filament-ecommerce/tree/v0.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/3x1io",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-09T12:15:04+00:00"
+        },
+        {
             "name": "tomatophp/filament-fcm",
             "version": "v1.0.10",
             "source": {
@@ -14709,68 +14990,6 @@
             "time": "2024-05-15T15:05:14+00:00"
         },
         {
-            "name": "tomatophp/filament-splade",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tomatophp/filament-splade.git",
-                "reference": "c1d0779195e3af652ec5d4320ac6299cd4e54b30"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tomatophp/filament-splade/zipball/c1d0779195e3af652ec5d4320ac6299cd4e54b30",
-                "reference": "c1d0779195e3af652ec5d4320ac6299cd4e54b30",
-                "shasum": ""
-            },
-            "require": {
-                "filament/filament": "^3.0.0",
-                "php": "^8.1|^8.2",
-                "protonemedia/laravel-splade": "^1.4",
-                "tomatophp/console-helpers": "^1.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "TomatoPHP\\FilamentSplade\\FilamentSpladeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TomatoPHP\\FilamentSplade\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fady Mondy",
-                    "email": "info@3x1.io"
-                }
-            ],
-            "description": "Integration of Splade Vue Components for Filament",
-            "keywords": [
-                "components",
-                "filament",
-                "form",
-                "laravel",
-                "modal",
-                "php",
-                "splade",
-                "table",
-                "vue3",
-                "vuejs3"
-            ],
-            "support": {
-                "issues": "https://github.com/tomatophp/filament-splade/issues",
-                "source": "https://github.com/tomatophp/filament-splade/tree/v1.0.0"
-            },
-            "time": "2024-04-08T10:49:12+00:00"
-        },
-        {
             "name": "tomatophp/filament-translations",
             "version": "v1.0.12",
             "source": {
@@ -14833,6 +15052,72 @@
                 }
             ],
             "time": "2024-06-15T19:54:26+00:00"
+        },
+        {
+            "name": "tomatophp/filament-twilio",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomatophp/filament-twilio.git",
+                "reference": "73e75dbae4a45f70180c0c808026a6afa72b4433"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomatophp/filament-twilio/zipball/73e75dbae4a45f70180c0c808026a6afa72b4433",
+                "reference": "73e75dbae4a45f70180c0c808026a6afa72b4433",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "filament/notifications": "^3.0",
+                "php": "^8.1|^8.2",
+                "tomatophp/console-helpers": "^1.1",
+                "twilio/sdk": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TomatoPHP\\FilamentTwilio\\FilamentTwilioServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TomatoPHP\\FilamentTwilio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fady Mondy",
+                    "email": "info@3x1.io"
+                }
+            ],
+            "description": "Send Whatsapp messages using Twilio and native filament Notification Facade class",
+            "keywords": [
+                "filament",
+                "filament-plugin",
+                "laravel",
+                "notification",
+                "php",
+                "twilio",
+                "whatsapp"
+            ],
+            "support": {
+                "issues": "https://github.com/tomatophp/filament-twilio/issues",
+                "source": "https://github.com/tomatophp/filament-twilio/tree/v1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/3x1io",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-07-03T08:20:30+00:00"
         },
         {
             "name": "tomatophp/filament-types",
@@ -15293,6 +15578,140 @@
                 "source": "https://github.com/tomatophp/pusher-notifications/tree/v1.0.0"
             },
             "time": "2024-03-12T18:59:55+00:00"
+        },
+        {
+            "name": "tomatophp/splade",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomatophp/splade.git",
+                "reference": "de7858aeb97cab973f8c78513a9470f8bf0c0d8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomatophp/splade/zipball/de7858aeb97cab973f8c78513a9470f8bf0c0d8c",
+                "reference": "de7858aeb97cab973f8c78513a9470f8bf0c0d8c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.48.2|^11.0.1",
+                "php": "^8.2|^8.3"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.10|^8.1",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0|^9.0",
+                "phpunit/phpunit": "^10.4"
+            },
+            "suggest": {
+                "kirschbaum-development/eloquent-power-joins": "Required to enable support sorting by (nested) relationships in Splade Tables (^3.0)",
+                "maatwebsite/excel": "Required to enable support exports in Splade Tables (^3.1)",
+                "spatie/fractalistic": "Required to enable support for Fractal transformers (^2.9)"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ProtoneMedia\\Splade\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Animation": "ProtoneMedia\\Splade\\Facades\\Animation",
+                        "SEO": "ProtoneMedia\\Splade\\Facades\\SEO",
+                        "Splade": "ProtoneMedia\\Splade\\Facades\\Splade",
+                        "Toast": "ProtoneMedia\\Splade\\Facades\\Toast"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ProtoneMedia\\Splade\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal Baljet",
+                    "email": "pascal@protone.media",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Fady Mondy",
+                    "email": "info@3x1.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Splade Core For FilamentPHP with a lot of custom components.",
+            "homepage": "https://github.com/protonemedia/laravel-splade",
+            "keywords": [
+                "filamentphp",
+                "laravel",
+                "laravel-splade",
+                "protonemedia",
+                "splade",
+                "tomatophp"
+            ],
+            "support": {
+                "issues": "https://github.com/tomatophp/splade/issues",
+                "source": "https://github.com/tomatophp/splade/tree/v0.0.1"
+            },
+            "time": "2024-06-26T13:24:27+00:00"
+        },
+        {
+            "name": "twilio/sdk",
+            "version": "8.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "10dbd6ecbc6ac1e0c61ab7d70c44e0794f8d3a1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/10dbd6ecbc6ac1e0c61ab7d70c44e0794f8d3a1f",
+                "reference": "10dbd6ecbc6ac1e0c61ab7d70c44e0794f8d3a1f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "phpunit/phpunit": ">=7.0 < 10"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Twilio\\": "src/Twilio/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Twilio API Team",
+                    "email": "api@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "https://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "support": {
+                "issues": "https://github.com/twilio/twilio-php/issues",
+                "source": "https://github.com/twilio/twilio-php/tree/8.2.2"
+            },
+            "time": "2024-07-02T09:32:09+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

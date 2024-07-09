@@ -16,7 +16,7 @@ return [
         "loginBy" => true,
         "avatar" => false,
         "types" => true,
-        "teams" => true,
+        "teams" => false,
         "apis" => true,
         "send_otp" => true,
         "impersonate" => [
