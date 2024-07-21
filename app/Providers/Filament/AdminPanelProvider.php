@@ -4,6 +4,7 @@ namespace App\Providers\Filament;
 
 use App\Filament\Pages\Tenancy\EditTeamProfile;
 use App\Filament\Pages\Tenancy\RegisterTeam;
+use App\Filament\Widgets\NotesWidget;
 use App\Models\Team;
 use EightyNine\Reports\ReportsPlugin;
 use Filament\FontProviders\GoogleFontProvider;
@@ -25,6 +26,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Kenepa\Banner\BannerPlugin;
 use ProtoneMedia\Splade\Http\SpladeMiddleware;
 use TomatoPHP\FilamentApi\FilamentAPIPlugin;
 use TomatoPHP\FilamentEcommerce\Filament\Widgets\OrderPaymentMethodChart;
@@ -68,7 +70,8 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class
+                Widgets\FilamentInfoWidget::class,
+                \TomatoPHP\FilamentNotes\Filament\Widgets\NotesWidget::class
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -84,6 +87,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
+            ->plugin(BannerPlugin::make()->persistsBannersInDatabase())
             ->databaseNotifications()
             ->plugin(\TomatoPHP\FilamentUsers\FilamentUsersPlugin::make())
             ->plugin(\TomatoPHP\FilamentTranslations\FilamentTranslationsPlugin::make()
@@ -94,7 +98,28 @@ class AdminPanelProvider extends PanelProvider
             ->plugin(FilamentTranslationsSwitcherPlugin::make())
             ->plugin(\TomatoPHP\FilamentMenus\FilamentMenusPlugin::make())
             ->plugin(\TomatoPHP\FilamentSettingsHub\FilamentSettingsHubPlugin::make())
-            ->plugin(\TomatoPHP\FilamentBrowser\FilamentBrowserPlugin::make())
+            ->plugin(
+                \TomatoPHP\FilamentBrowser\FilamentBrowserPlugin::make()
+                    ->hiddenFolders([
+                        base_path('app')
+                    ])
+                    ->hiddenFiles([
+                        base_path('.env')
+                    ])
+                    ->hiddenExtantions([
+
+                        "php"
+                    ])
+                    ->allowCreateFolder()
+                    ->allowCreateNewFile()
+                    ->allowCreateFolder()
+                    ->allowRenameFile()
+                    ->allowDeleteFile()
+                    ->allowMarkdown()
+                    ->allowCode()
+                    ->allowPreview()
+                    ->basePath(base_path())
+            )
             ->plugin(\TomatoPHP\FilamentArtisan\FilamentArtisanPlugin::make())
             ->plugin(\TomatoPHP\FilamentPlugins\FilamentPluginsPlugin::make())
             ->plugin(\TomatoPHP\FilamentTypes\FilamentTypesPlugin::make())
@@ -102,6 +127,7 @@ class AdminPanelProvider extends PanelProvider
                 \TomatoPHP\FilamentCms\FilamentCMSPlugin::make()
                     ->allowBehanceImport()
                     ->allowYoutubeImport()
+                    ->useFormBuilder()
                     ->useThemeManager()
                     ->usePageBuilder()
             )
@@ -126,6 +152,7 @@ class AdminPanelProvider extends PanelProvider
                     ->useAPIs()
                     ->impersonateRedirect('/app')
             )
+            ->plugin(\TomatoPHP\FilamentNotes\FilamentNotesPlugin::make())
             ->plugin(\BezhanSalleh\FilamentShield\FilamentShieldPlugin::make())
             ->plugin(FilamentAPIPlugin::make())
             ->plugin(FilamentMediaManagerPlugin::make()->allowSubFolders())

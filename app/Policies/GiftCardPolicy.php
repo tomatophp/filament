@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use TomatoPHP\FilamentApi\Models\APIResource;
+use TomatoPHP\FilamentEcommerce\Models\GiftCard;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class APIResourcePolicy
+class GiftCardPolicy
 {
     use HandlesAuthorization;
 
@@ -15,15 +15,15 @@ class APIResourcePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_api');
+        return $user->can('view_any_gift::card');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, APIResource $aPIResource): bool
+    public function view(User $user, GiftCard $giftCard): bool
     {
-        return $user->can('view_api');
+        return $user->can('view_gift::card');
     }
 
     /**
@@ -31,23 +31,23 @@ class APIResourcePolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_api');
+        return $user->can('create_gift::card');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, APIResource $aPIResource): bool
+    public function update(User $user, GiftCard $giftCard): bool
     {
-        return $user->can('update_api');
+        return $user->can('update_gift::card');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, APIResource $aPIResource): bool
+    public function delete(User $user, GiftCard $giftCard): bool
     {
-        return $user->can('delete_api');
+        return $user->can('delete_gift::card');
     }
 
     /**
@@ -55,15 +55,15 @@ class APIResourcePolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_api');
+        return $user->can('delete_any_gift::card');
     }
 
     /**
      * Determine whether the user can permanently delete.
      */
-    public function forceDelete(User $user, APIResource $aPIResource): bool
+    public function forceDelete(User $user, GiftCard $giftCard): bool
     {
-        return $user->can('force_delete_api');
+        return $user->can('force_delete_gift::card');
     }
 
     /**
@@ -71,15 +71,15 @@ class APIResourcePolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_api');
+        return $user->can('force_delete_any_gift::card');
     }
 
     /**
      * Determine whether the user can restore.
      */
-    public function restore(User $user, APIResource $aPIResource): bool
+    public function restore(User $user, GiftCard $giftCard): bool
     {
-        return $user->can('restore_api');
+        return $user->can('restore_gift::card');
     }
 
     /**
@@ -87,15 +87,15 @@ class APIResourcePolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_api');
+        return $user->can('restore_any_gift::card');
     }
 
     /**
      * Determine whether the user can replicate.
      */
-    public function replicate(User $user, APIResource $aPIResource): bool
+    public function replicate(User $user, GiftCard $giftCard): bool
     {
-        return $user->can('replicate_api');
+        return $user->can('replicate_gift::card');
     }
 
     /**
@@ -103,6 +103,6 @@ class APIResourcePolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_api');
+        return $user->can('reorder_gift::card');
     }
 }

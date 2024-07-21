@@ -49,6 +49,17 @@
       0 => 'BladeUI\\Icons\\BladeIconsServiceProvider',
     ),
   ),
+  'creagia/filament-code-field' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Creagia\\FilamentCodeField\\FilamentCodeFieldServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'FilamentCodeField' => 'Creagia\\FilamentCodeField\\Facades\\FilamentCodeField',
+    ),
+  ),
   'filament/actions' => 
   array (
     'providers' => 
@@ -146,6 +157,17 @@
     'aliases' => 
     array (
       'Mingle' => 'Ijpatricio\\Mingle\\Facades\\Mingle',
+    ),
+  ),
+  'kenepa/banner' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Kenepa\\Banner\\BannerServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Banner' => 'BannerManager',
     ),
   ),
   'kirschbaum-development/eloquent-power-joins' => 
@@ -250,6 +272,13 @@
     'aliases' => 
     array (
       'Excel' => 'Maatwebsite\\Excel\\Facades\\Excel',
+    ),
+  ),
+  'mallardduck/blade-boxicons' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'MallardDuck\\BladeBoxicons\\BladeBoxiconsServiceProvider',
     ),
   ),
   'milon/barcode' => 
@@ -500,6 +529,13 @@
       0 => 'TomatoPHP\\FilamentMenus\\FilamentMenusServiceProvider',
     ),
   ),
+  'tomatophp/filament-notes' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TomatoPHP\\FilamentNotes\\FilamentNotesServiceProvider',
+    ),
+  ),
   'tomatophp/filament-plugins' => 
   array (
     'providers' => 
@@ -512,6 +548,13 @@
     'providers' => 
     array (
       0 => 'TomatoPHP\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider',
+    ),
+  ),
+  'tomatophp/filament-translation-component' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TomatoPHP\\FilamentTranslationComponent\\FilamentTranslationComponentServiceProvider',
     ),
   ),
   'tomatophp/filament-translations' => 
